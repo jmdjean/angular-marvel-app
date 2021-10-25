@@ -1,0 +1,28 @@
+.bg-light-blue {
+  background-color: #333;
+}
+
+.nav-size {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  font-family: sans-serif;
+
+  a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  a:hover {
+    background-color: rgb(65, 65, 65);
+  }
+
+  a.active {
+    background-color: #000000;
+    color: white;
+  }
+}

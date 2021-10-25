@@ -1,0 +1,55 @@
+<app-bread-crumb [items]="[{text: 'Personagens / ', link: '/characters'}, {text: 'Detalhes do personagem'}]">
+</app-bread-crumb>
+
+<div *ngIf="character" class="detail-size">
+    <h2>Detalhes do persongem : {{character.name}}</h2>
+
+    <div class="list-columns">
+        <div class="column">
+            <div class="card">
+                <img [src]="character.imageUrl" alt="{{character.name}}" class="img-detail">
+            </div>
+        </div>
+        <div class="column">
+            <div class="detail-description card">
+                <h4>Descrição </h4>
+                <hr>
+                {{character.description}}
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="detail-list card">
+                <div class="align-text-center">
+                    <h4>Comics</h4>
+                    <hr>
+                </div>
+                <ul *ngIf="character.comics.items.length > 0">
+                    <li *ngFor="let item of character.comics.items">
+                        {{item.name}}
+                    </li>
+                </ul>
+                <div *ngIf="character.comics.items.length === 0" class="align-text-center">
+                    Esse personagem não possui comics.
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="detail-list card">
+                <div class="align-text-center">
+                    <h4>Histórias</h4>
+                    <hr>
+                </div>
+                <ul *ngIf="character.stories.items.length > 0">
+                    <li *ngFor="let item of character.stories.items">
+                        {{item.name}}
+                    </li>
+                </ul>
+                <div *ngIf="character.stories.items.length === 0" class="align-text-center">
+                    Esse personagem não possui histórias.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

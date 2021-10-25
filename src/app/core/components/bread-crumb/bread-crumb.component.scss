@@ -1,0 +1,30 @@
+.nav-breadcrumb {
+  margin-bottom: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #cfcfcf;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+.breadcrumb-item {
+  box-sizing: border-box;
+}
+
+.home-link {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.home-link:hover{
+    text-decoration: underline;
+}

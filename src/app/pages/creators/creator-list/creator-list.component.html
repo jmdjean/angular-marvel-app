@@ -1,0 +1,31 @@
+<app-bread-crumb [items]="[{text: 'Criadores'}]">
+</app-bread-crumb>
+
+<div class="list-size">
+    <h2>Criadores</h2>
+    <div class="list-cards">
+        <div *ngFor="let creator of creators" class="column">
+            <div class="cards">
+                <div class="item-center">
+                    <img [src]="creator.imageUrl" class="img-list item-center" alt="{{creator.fullName}}">
+                </div>
+
+                <div class="content">
+                    <div class="item-center">
+                        <span>{{creator.fullName}}</span>
+                    </div>
+                </div>
+
+                <div class="card-footer item-center" (click)="goToDetails(creator.id)">
+                    <span>mais informações</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pagination item-center">
+    <button (click)="goToLastPage()"> &lt; </button>
+    <span class="span-pagination">Página {{pageNumber}} de {{pageTotalNumber}}</span>
+    <button (click)="goToNextPage()"> &gt; </button>
+</div>

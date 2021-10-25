@@ -1,0 +1,49 @@
+body {
+  margin: 0px !important;
+  background-image: url("assets/images/cool-background.png");
+}
+
+.screen {
+  margin-top: 65px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.item-center {
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+.ml-25 {
+  margin-left: 25px;
+}
+
+.mr-25 {
+  margin-right: 25px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

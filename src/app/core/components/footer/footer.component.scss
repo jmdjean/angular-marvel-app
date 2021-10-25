@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  height: 30px;
+  background-color: #cfcfcf;
+  color: black;
+  position: fixed;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  bottom: 0;
+
+  div {
+    font-size: 10pt;
+    margin-top: 10px;
+
+    span {
+      padding-left: 10px;
+    }
+  }
+}

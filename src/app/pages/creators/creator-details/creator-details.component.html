@@ -1,0 +1,63 @@
+<app-bread-crumb [items]="[{text: 'Criadores / ', link: '/creators'}, {text: 'Detalhes do criador'}]">
+</app-bread-crumb>
+
+<div *ngIf="creator" class="detail-size">
+    <p>Detalhes do criador : {{creator.fullName}}</p>
+
+    <div class="list-columns">
+        <div class="column">
+            <div class="card">
+                <img [src]="creator.imageUrl" alt="{{creator.fullName}}" class="img-detail">
+            </div>
+        </div>
+        <div class="column">
+            <div class="detail-list card">
+                <div class="align-text-center">
+                    <h4>Comics</h4>
+                    <hr>
+                </div>
+                <ul *ngIf="creator.comics.items.length > 0">
+                    <li *ngFor="let item of creator.comics.items">
+                        {{item.name}}
+                    </li>
+                </ul>
+                <div *ngIf="creator.comics.items.length === 0" class="align-text-center">
+                    Esse criador não possui comics.
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="detail-list card">
+                <div class="align-text-center">
+                    <h4>Histórias</h4>
+                    <hr>
+                </div>
+                <ul *ngIf="creator.stories.items.length > 0">
+                    <li *ngFor="let item of creator.stories.items">
+                        {{item.name}}
+                    </li>
+                </ul>
+                <div *ngIf="creator.stories.items.length === 0" class="align-text-center">
+                    Esse criador não possui histórias.
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="detail-list card">
+                <div class="align-text-center">
+                    <h4>Eventos</h4>
+                    <hr>
+                </div>
+                <ul *ngIf="creator.events.items.length > 0">
+                    <li *ngFor="let item of creator.events.items">
+                        {{item.name}}
+                    </li>
+                </ul>
+                <div *ngIf="creator.events.items.length === 0" class="align-text-center">
+                    Esse criador não possui eventos.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
