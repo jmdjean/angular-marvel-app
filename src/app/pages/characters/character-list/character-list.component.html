@@ -6,8 +6,13 @@
 
     <div class="list-cards">
         <div *ngFor="let character of characters" class="column">
-            <div class="cards">
-                <div class="item-center">
+            <div class="card me-2">
+                <img class="card-img-top img-list" [src]="character.imageUrl" alt="{{character.name}}">
+                <div class="card-body text-ellipsis">
+                    <p class="card-text">{{character.name}}</p>
+                </div>
+                <a href="#" class="btn btn-dark" (click)="goToDetails(character.id)">detalhes</a>
+                <!-- <div class="item-center">
                     <img [src]="character.imageUrl" class="img-list item-center" alt="{{character.name}}">
                 </div>
 
@@ -19,11 +24,22 @@
 
                 <div class="card-footer item-center" (click)="goToDetails(character.id)">
                     <span>mais informações</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </div>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="card" *ngFor="let character of characters">
+            <img class="card-img-top" [src]="character.imageUrl" alt="{{character.name}}">
+            <div class="card-body">
+                <p class="card-text">{{character.name}}</p>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 <div class="pagination item-center">
     <button (click)="goToLastPage()"> &lt; </button>

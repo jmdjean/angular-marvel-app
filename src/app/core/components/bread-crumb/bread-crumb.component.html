@@ -1,16 +1,16 @@
 <nav class="nav-breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a routerLink="/" class="home-link">Home /</a>
+        <a routerLink="/" class="home-link">Home</a>
       </li>
   
       <li *ngFor="let item of items" class="breadcrumb-item">
         <span *ngIf="isTheLastItem(item)">
-         &nbsp;&nbsp;{{item.text}}
+         {{item.text}}
         </span>
   
         <a *ngIf="!isTheLastItem(item)" [routerLink]="item.link" class="home-link">
-          &nbsp;&nbsp;{{item.text}}
+          {{item.text}}
         </a>
       </li>
     </ol>

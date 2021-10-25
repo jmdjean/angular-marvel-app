@@ -1,5 +1,6 @@
 .img-list {
-  height: 175px;
+  max-width: 227px;
+  max-height: 192px;
 }
 
 .list-size {
@@ -15,47 +16,42 @@
   clear: both;
 }
 
-.cards {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  margin-right: 20px;
-  background-color: #ffffff;
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .column {
   float: left;
-  width: 20%;
+  width: 19%;
 }
 
-@media screen and (min-width: 1151px){
+@media screen and (min-width: 1151px) {
   .column {
-    width: 20%;
+    width: 19%;
     display: block;
-    margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width: 951px) and (max-width: 1150px){
+@media screen and (min-width: 951px) and (max-width: 1150px) {
   .column {
     width: 25%;
     display: block;
-    margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 950px){
+@media screen and (min-width: 600px) and (max-width: 950px) {
   .column {
     width: 33%;
     display: block;
-    margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width: 490px) and (max-width: 600px){
+@media screen and (min-width: 490px) and (max-width: 600px) {
   .column {
     width: 50%;
     display: block;
-    margin-bottom: 20px;
   }
 }
 
@@ -63,38 +59,5 @@
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
   }
-}
-
-.cards:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.content {
-  padding: 2px 16px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-footer {
-  height: 50px;
-  background-color: #ababab;
-  font-size: 12pt;
-  text-align: center;
-  width: 100%;
-  vertical-align: bottom;
-  bottom: 0;
-  left: 0;
-  color: black;
-  font-size: 10pt;
-}
-
-.card-footer:hover {
-  cursor: pointer;
-  background-color: grey;
-  text-decoration: underline;
 }
