@@ -28,7 +28,7 @@ export abstract class BaseResourceService {
     return this.http.get(url)
       .pipe(
         map(res => this.dataToResourceModelData(res)),
-        catchError((error) => this.handleError(error))
+        catchError(error => this.handleError(error))
       );
   }
 
@@ -37,7 +37,7 @@ export abstract class BaseResourceService {
     return this.http.get(url)
       .pipe(
         map(res => this.dataToResourceModelResults(res)),
-        catchError((error) => this.handleError(error))
+        catchError(error => this.handleError(error))
       );
   }
 
@@ -60,7 +60,7 @@ export abstract class BaseResourceService {
   }
 
   protected handleError(error: any): Observable<any> {
-    console.log("ERRO NA REQUISIÇÃO => ", error);
+    console.log('ERRO NA REQUISIÇÃO => ', error);
     alert('Ocorreu um erro ao carregar os dados, tente mais tarde.');
     return throwError(error);
   }

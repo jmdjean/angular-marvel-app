@@ -1,48 +1,23 @@
 <app-bread-crumb [items]="[{text: 'Personagens'}]">
 </app-bread-crumb>
 
-<div class="list-size">
-    <h2>Personagens</h2>
+<div style="padding-bottom: 60px;">
+    <div class="list-size">
+        <div class="list-cards">
+            <div *ngFor="let character of characters" class="cards">
 
-    <div class="list-cards">
-        <div *ngFor="let character of characters" class="column">
-            <div class="card me-2">
                 <img class="card-img-top img-list" [src]="character.imageUrl" alt="{{character.name}}">
                 <div class="card-body text-ellipsis">
                     <p class="card-text">{{character.name}}</p>
                 </div>
-                <a href="#" class="btn btn-dark" (click)="goToDetails(character.id)">detalhes</a>
-                <!-- <div class="item-center">
-                    <img [src]="character.imageUrl" class="img-list item-center" alt="{{character.name}}">
-                </div>
-
-                <div class="content">
-                    <div class="item-center">
-                        <span>{{character.name}}</span>
-                    </div>
-                </div>
-
-                <div class="card-footer item-center" (click)="goToDetails(character.id)">
-                    <span>mais informações</span>
-                </div> -->
+                <a class="btn btn-dark" (click)="goToDetails(character.id)">detalhes</a>
             </div>
         </div>
     </div>
-</div>
 
-<!-- <div class="container">
-    <div class="row">
-        <div class="card" *ngFor="let character of characters">
-            <img class="card-img-top" [src]="character.imageUrl" alt="{{character.name}}">
-            <div class="card-body">
-                <p class="card-text">{{character.name}}</p>
-            </div>
-        </div>
+    <div class="pagination item-center">
+        <button class="btn btn-dark" (click)="goToLastPage()"> &lt; </button>
+        <span class="span-pagination">Página {{pageNumber}} de {{pageTotalNumber}}</span>
+        <button class="btn btn-dark" (click)="goToNextPage()"> &gt; </button>
     </div>
-</div> -->
-
-<div class="pagination item-center">
-    <button (click)="goToLastPage()"> &lt; </button>
-    <span class="span-pagination">Página {{pageNumber}} de {{pageTotalNumber}}</span>
-    <button (click)="goToNextPage()"> &gt; </button>
 </div>

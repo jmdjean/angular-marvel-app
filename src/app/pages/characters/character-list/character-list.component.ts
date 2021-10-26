@@ -15,7 +15,7 @@ export class CharacterListComponent implements OnInit, OnDestroy {
   charactersData: Subscription;
   characters: Array<Character> = [];
   apiData: BaseResourceApiData;
-  pageSize = 5;
+  pageSize = 6;
   offSet = 0;
   pageNumber = 1;
   pageTotalNumber = 0;

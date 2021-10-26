@@ -1,31 +1,23 @@
 <app-bread-crumb [items]="[{text: 'Criadores'}]">
 </app-bread-crumb>
 
-<div class="list-size">
-    <h2>Criadores</h2>
-    <div class="list-cards">
-        <div *ngFor="let creator of creators" class="column">
-            <div class="cards">
-                <div class="item-center">
-                    <img [src]="creator.imageUrl" class="img-list item-center" alt="{{creator.fullName}}">
-                </div>
+<div style="padding-bottom: 60px;">
+    <div class="list-size">
+        <div class="list-cards">
+            <div *ngFor="let creator of creators" class="cards">
 
-                <div class="content">
-                    <div class="item-center">
-                        <span>{{creator.fullName}}</span>
-                    </div>
+                <img class="card-img-top img-list" [src]="creator.imageUrl" alt="{{creator.fullName}}">
+                <div class="card-body text-ellipsis">
+                    <p class="card-text">{{creator.fullName}}</p>
                 </div>
-
-                <div class="card-footer item-center" (click)="goToDetails(creator.id)">
-                    <span>mais informações</span>
-                </div>
+                <a class="btn btn-dark" (click)="goToDetails(creator.id)">detalhes</a>
             </div>
         </div>
     </div>
-</div>
 
-<div class="pagination item-center">
-    <button (click)="goToLastPage()"> &lt; </button>
-    <span class="span-pagination">Página {{pageNumber}} de {{pageTotalNumber}}</span>
-    <button (click)="goToNextPage()"> &gt; </button>
+    <div class="pagination item-center">
+        <button class="btn btn-dark" (click)="goToLastPage()"> &lt; </button>
+        <span class="span-pagination">Página {{pageNumber}} de {{pageTotalNumber}}</span>
+        <button class="btn btn-dark" (click)="goToNextPage()"> &gt; </button>
+    </div>
 </div>
