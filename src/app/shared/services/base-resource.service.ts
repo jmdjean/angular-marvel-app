@@ -1,10 +1,10 @@
 import { Injector } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
 import { throwError } from 'rxjs';
 import { BaseResourceApiData } from '../model/baseResourceApiDataModel';
-import { map, catchError } from "rxjs/operators";
+import { map, catchError } from 'rxjs/operators';
 import { Thumbnail } from '../model/thumbnail.model';
 
 export abstract class BaseResourceService {

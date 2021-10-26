@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { BaseResourceApiData } from 'src/app/shared/model/baseResourceApiDataModel';
@@ -10,7 +10,7 @@ import { CreatorService } from '../shared/creator.service';
   templateUrl: './creator-details.component.html',
   styleUrls: ['./creator-details.component.scss']
 })
-export class CreatorDetailsComponent implements OnInit {
+export class CreatorDetailsComponent implements OnInit, OnDestroy {
 
   creator: Creator;
   creatorData: Subscription;
